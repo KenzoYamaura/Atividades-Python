@@ -7,5 +7,5 @@ gasolina = float(input("Quantos reais colocou: "))
 valor = float(input("Quantos o preço da gasolina por por litro: "))
 
 custo = (gasolina/valor)
-print(custo)
+print(f'O quanto o tanque aguenta {custo}')
 
