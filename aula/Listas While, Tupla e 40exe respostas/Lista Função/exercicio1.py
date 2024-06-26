@@ -15,10 +15,3 @@ def calcular_soma(a):
     for i in lis:
         s += int(i)
     print(s)
-
-
-
-
-
-
-    
