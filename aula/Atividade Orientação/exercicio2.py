@@ -1,6 +1,3 @@
-from collections.abc import Iterable
-
-
 class Aluno:    
     def __init__(self, nome, ra):
         self.nome = nome
