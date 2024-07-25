@@ -1,39 +1,68 @@
-'''Você foi contratado para desenvolver um sistema de gerenciamento escolar em Python 
-que   permita   aos   professores   gerenciar   turmas   e   alunos.   O   sistema   deve   oferecer 
-funcionalidades para cadastrar turmas, adicionar alunos e suas notas, atualizar informações 
-dos alunos, remover alunos e visualizar as informações das turmas e alunos cadastrados.'''
-
 class Escola:
-    def __init__(self, nomeTurma):
-        self.nomeTurma = nomeTurma
-        self.listaDeTurma = []
+    def __init__(self):
+        self.turmas = []
     
-    def AdicionarTurma(self, turma):
-        if turma not in self.listaDeTurma:
-            self.listaDeTurma.append(turma)
+    def AdicionarTurmas(self):
+        nome = input("Digite o nome da turma: ")
+        turma = Turmas(nome)
+        self.turmas.append(turma)
+    
+    def AdicionarAlunosEmTurma(self):
+        nomeTurma = input("Digite o nome da turma: ")
+        turma = self.BuscarTurmas(nomeTurma)
+
+        if turma:
+            turma.AdicionarAluno()
         else:
-            print("Aluno Ja existente")
+            print("Turma não encontrada")
 
-
-class Turma:
-    def __init__(self, nomeAluno):
-        self.nomeAluno = nomeAluno
+    def BuscarTurmas(self, nomeTurma):
+        for i in self.turmas:
+            if i.nome == nomeTurma:
+                return i
+        
+    def Detalhe(self):
+        for i in self.turmas:
+            print(f"{i.nome}")
+            for j in i.alunos:
+                print(f"{j.nome} - {j.notas}")
+    
+class Turmas:
+    def __init__(self, nome):
+        self.nome = nome
         self.alunos = []
-
-    def AdicionarAluno():
-        pass
-
-
-
-
-class Aluno:
+    
+    def AdicionarAluno(self):
+        nome = input("Digite o nome do Aluno: ")
+        aluno = Alunos(nome)
+        aluno.AdicionarNotas()
+        self.alunos.append(aluno)
+    
+class Alunos:
     def __init__(self, nome):
         self.nome = nome
         self.notas = []
     
-    def AddNotas(self, notas):
-        self.notas.append(notas)
+    def AdicionarNotas(self):
+        qtd = int(input("Digite a quantidade de notas: "))
+        for i in range(qtd):
+            nota = float(input(f"Digite a {i+1}ª nota do aluno {self.nome}: "))
+            self.notas.append(nota)
 
+escola = Escola()
 
-escola = Escola("Turma A")
+while True:
+    print("1 - Adicionar Turma")
+    print("2 - Adicionar Alunos em uma turma")
+    print("3 - Detalhes das turmas")
 
+    opcao = int(input("Digite uma das opções: "))
+
+    if opcao == 1:
+        escola.AdicionarTurmas()
+    
+    elif opcao == 2:
+        escola.AdicionarAlunosEmTurma()
+    
+    elif opcao == 3:
+        escola.Detalhe()

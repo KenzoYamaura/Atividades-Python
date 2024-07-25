@@ -1,8 +1,11 @@
-'''1- Problema: Sistema de Gerenciamento de Estoque:
+'''
+1- Problema: Sistema de Gerenciamento de Estoque:
 Você foi contratado para desenvolver um sistema simples de gerenciamento de estoque para 
 uma pequena loja. A loja vende diversos produtos e precisa de uma forma de rastrear o 
 estoque de cada item, bem como atualizar o estoque conforme os produtos são vendidos ou 
-novas remessas chegam.'''
+novas remessas chegam.
+'''
+
 class Produto:
     def __init__(self, nome, quantidade):
         self.nome = nome  
@@ -22,28 +25,25 @@ class Estoque:
         estoque1.AdicionarEstoque(produto)
         print(f"Produto '{nome}' adicionado com sucesso.")
             
-    def AtualizarEstoque(self):
-        add_remov = input("Deseja Adicionar ou Remover produtos? \n(Adicionar / Remover) ")
-        
-        if add_remov == "Adicionar":
-            nomeProd = input("Qual produto deseja alterar?: ")
-            for prod in self.estoque:
-                if prod.nome == nomeProd:
-                    qtd = int(input("Qual quantidade deseja alterar? "))
-                    prod.quantidade += qtd
-                    print(f"A quantidade do produto {prod.nome} foi atualizado para {prod.quantidade} Unidades")
-                    return
-            print(f"O Produto {nomeProd} não encontrado!")
-
-        elif add_remov == "Remover":
-            nomeProd = input("Qual produto deseja remover?: ")
-            for prod in self.estoque:
-                if prod.nome == nomeProd:
-                    qtdRemover = int(input("Qual quantidade deseja remover?: "))
-                    prod.quantidade -= qtdRemover
-                    print(f"A quantidade do produto {prod.nome} foi atualizado para {prod.quantidade} Unidades")
-                    return
-            print("Opção inválida")
+    def AdicionarEstoque(self):        
+        nomeProd = input("Qual produto deseja alterar?: ")
+        for prod in self.estoque:
+            if prod.nome == nomeProd:
+                qtd = int(input("Qual quantidade deseja alterar? "))
+                prod.quantidade += qtd
+                print(f"A quantidade do produto {prod.nome} foi atualizado para {prod.quantidade} Unidades")
+                return
+        print(f"O Produto {nomeProd} não encontrado!")
+    
+    def RemoverEstoque(self):
+        nomeProd = input("Qual produto deseja remover?: ")
+        for prod in self.estoque:
+            if prod.nome == nomeProd:
+                qtdRemover = int(input("Qual quantidade deseja remover?: "))
+                prod.quantidade -= qtdRemover
+                print(f"A quantidade do produto {prod.nome} foi atualizado para {prod.quantidade} Unidades")
+                return
+        print("Opção inválida")
 
     def ConsultarEstoque(self):
         consultarProd = input("Qual produto deseja consutar? ")
@@ -51,7 +51,7 @@ class Estoque:
             if produto.nome == consultarProd:
                 print(f"O produto {produto.nome} tem {produto.quantidade}")
                 return
-        print(f"")
+        print(f"Opção Inválida")
     
     def ListarProduto(self):
         for produto in self.estoque:
@@ -63,9 +63,10 @@ while True:
     print("-"*40)
     print("Mercadin")
     print("1 - Adicionar Produto ")
-    print("2 - Atualizar Estoque ")
-    print("3 - Consultar Produto ")
-    print("4 - Listar Produto ")
+    print("2 - Adicionar Estoque ")
+    print("3 - Remover Estoque ")
+    print("4 - Consultar Produto ")
+    print("5 - Listar Produto ")
     print("0 - Sair")
     print("-"*40)
     opcao = input("Digite uma das opções: ")
@@ -74,12 +75,15 @@ while True:
         estoque1.AdicionarProduto()
     
     elif opcao == "2":
-        estoque1.AtualizarEstoque()
+        estoque1.AdicionarEstoque()
     
     elif opcao == "3":
+        estoque1.RemoverEstoque()
+
+    elif opcao == "4":
         estoque1.ConsultarEstoque()
     
-    elif opcao == "4":
+    elif opcao == "5":
         estoque1.ListarProduto()
     
     elif opcao == "0":
