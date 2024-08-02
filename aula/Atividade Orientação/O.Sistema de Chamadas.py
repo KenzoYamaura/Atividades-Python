@@ -5,25 +5,20 @@ Funcionalidades do Sistema
 Login do Usuário: 
 
 O sistema deve permitir que o usuário faça login com um nome de usuário e senha. 
-
 Após o login, o usuário pode acessar suas funcionalidades. 
 
 Cadastro de Chamado: 
 
-O usuário pode informar um problema, selecionando o tipo do problema (por exemplo, "Técnico", "Administrativo", "Financeiro", etc.). 
-
+O usuário pode informar um problema, selecionando o tipo do problema (por exemplo, "Técnico", "Administrativo", "Financeiro", etc.).
 O sistema deve permitir ao usuário descrever o problema detalhadamente. 
 
 Monitoramento de Chamados: 
 
 O usuário pode visualizar o status dos chamados abertos (por exemplo, "Aberto", "Em Andamento", "Concluído"). 
-
-O usuário pode consultar o histórico de todos os chamados que ele criou, visualizando as informações do problema e seu status atual. 
-
+O usuário pode consultar o histórico de todos os chamados que ele criou, visualizando as informações do problema e seu status atual.
 Acesso Administrativo: 
 
 O administrador (ADM) pode fazer login e visualizar todos os chamados registrados no sistema. 
-
 O ADM pode alterar o status de um chamado para "Em Andamento" ou "Concluído", conforme o progresso da resolução do problema. 
 
 '''
@@ -33,6 +28,9 @@ class Usuario:
         self.login = login
         self.senha = senha
         self.admin = admin
+
+    def autenticar(self, login, senha):
+        return self.login == login and self.senha == senha
 
 class Chamados:
     cont_chamados = 0
@@ -58,6 +56,19 @@ class SistemaChamados:
     def criarUsuarios(self):
         self.usuarios.append(Usuario("admin", "admin", True))
         self.usuarios.append(Usuario("user1", 123))
+    
+    def login(self):
+        login = input("Login: ")
+        senha = input("Senha: ")
+        for usuario in self.usuarios:
+            if Usuario.autenticar(login, senha):
+                self.usuario_atual == usuario
+                print(f"Bem-Vindo, {usuario.login}")
+                return True
+        print("Login Incorreto")
+        return False
+    
+
 
 
 
