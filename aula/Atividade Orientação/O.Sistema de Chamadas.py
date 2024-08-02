@@ -48,3 +48,4 @@ class CadastroChamados:
         chamados = []
     
     def AbrirChamado(self):
+        pass
