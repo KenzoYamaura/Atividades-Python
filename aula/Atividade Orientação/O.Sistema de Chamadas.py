@@ -28,24 +28,37 @@ O ADM pode alterar o status de um chamado para "Em Andamento" ou "Concluído", c
 
 '''
 
-class Login:
-    def __init__(self, login, senha):
+class Usuario:
+    def __init__(self, login, senha, admin = False):
         self.login = login
         self.senha = senha
+        self.admin = admin
 
-class Administrativo(Login):
-    def __init__(self, login, senha, matricula):
-        super().__init__(login, senha)
-        self.matricula = matricula
+class Chamados:
+    cont_chamados = 0
+
+    def __init__(self, usuario, tipo_problema, descricao):
+        cont_chamados += 1
+        self.id = Chamados.cont_chamados
+        self.usuario = usuario
+        self.tipo_problema = tipo_problema
+        self.descricao = descricao
+        self.status = "Aberto"
     
-class Cliente(Login):
-    def __init__(self, login, senha, ):
-        super().__init__(login, senha)
-        
+    def __srt__(self):
+        return f"Id: {self.id}, \nTipo do problema {self.tipo_problema}, \nDescrição: {self.descricao}"
 
-class CadastroChamados:
+class SistemaChamados:
     def __init__(self):
-        chamados = []
-    
-    def AbrirChamado(self):
-        pass
+        self.usuarios = []
+        self.chamados = []
+        self.usuario_atual = None
+        self.criarUsuarios()
+        
+    def criarUsuarios(self):
+        self.usuarios.append(Usuario("admin", "admin", True))
+        self.usuarios.append(Usuario("user1", 123))
+
+
+
+
