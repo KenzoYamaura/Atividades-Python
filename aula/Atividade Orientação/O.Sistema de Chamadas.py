@@ -36,7 +36,7 @@ class Chamados:
     cont_chamados = 0
 
     def __init__(self, usuario, tipo_problema, descricao):
-        cont_chamados += 1
+        Chamados.cont_chamados += 1
         self.id = Chamados.cont_chamados
         self.usuario = usuario
         self.tipo_problema = tipo_problema
@@ -55,21 +55,90 @@ class SistemaChamados:
         
     def criarUsuarios(self):
         self.usuarios.append(Usuario("admin", "admin", True))
-        self.usuarios.append(Usuario("user1", 123))
+        self.usuarios.append(Usuario("user1", "123"))
     
     def login(self):
         login = input("Login: ")
         senha = input("Senha: ")
         for usuario in self.usuarios:
-            if Usuario.autenticar(login, senha):
-                self.usuario_atual == usuario
+            if usuario.autenticar(login, senha):
+                self.usuario_atual = usuario
                 print(f"Bem-Vindo, {usuario.login}")
                 return True
         print("Login Incorreto")
         return False
     
+    def criarChamado(self):
+        categoria = input("Qual o tipo do problema? (Técnico / Administrativo / Financeiro): ")
+        descricao = input("Descreva o problema: ")
+        novo_chamado = Chamados(self.usuario_atual, categoria, descricao)
+        self.chamados.append(novo_chamado)
+        print("Seu Chamado foi criado com sucesso")
+    
+    def visualizarChamados(self):
+        if self.usuario_atual.admin:
+            for chamado in self.chamados:
+                print("-" * 40)
+                print(f"Tipo de Problema: {chamado.tipo_problema} \nDescrição: {chamado.descricao}")
+                print("-" * 40)
+        else:
+            for chamado in self.chamados:
+                if chamado.usuario == self.usuario_atual:
+                    print("-" * 40)
+                    print(f"Tipo de Problema: {chamado.tipo_problema} \nDescrição: {chamado.descricao}")
+                    print("-" * 40)
+    
+    def atualizarChamados(self):
+        if not self.usuario_atual.admin:
+            print("Acesso Negado")
+            return
+        id_chamado = int(input("Digite o número do ID do chamado: "))
+        for chamado in self.chamados:
+            if chamado.id == id_chamado:
+                novo_status = input("Digite o Atual Status do problema: ('Em Aberto' / 'Em Progresso' / 'Concluído') ")
+                chamado.status = novo_status
+                print("Chamado Atualizado")
+                return
+        print("Chamado não encontrado")
+
+    def Inicialização(self):
+         while True:
+            if not self.login():
+                break
+            else:
+                print("Deseja tentar novamente? (S/N)")
+                if input().strip().upper() != 'S':
+                    return
+        
+            while True:
+                if self.usuario_atual.admin:
+                    print("1. Visualizar Chamados")
+                    print("2. Atualizar Chamados")
+                    print("0. Sair")
+                    opcao = input("Escolha uma opção: ")
+                    if opcao == '1':
+                        self.visualizarChamados()
+                    elif opcao == '2':
+                        self.atualizarChamados()
+                    elif opcao == '0':
+                        break
+                    else:
+                        print("Opção inválida.")
+                else:
+                    print("1. Criar Chamados")
+                    print("2. Visualizar Chamados")
+                    print("0. Sair")
+                    opcao = input("Escolha uma opção: ")
+                    if opcao == '1':
+                        self.criarChamado()
+                    elif opcao == '2':
+                        self.visualizarChamados()
+                    elif opcao == '0':
+                        break
+                    else:
+                        print("Opção inválida.")
 
 
-
-
+sistema = SistemaChamados()
+sistema.Inicialização()
 
