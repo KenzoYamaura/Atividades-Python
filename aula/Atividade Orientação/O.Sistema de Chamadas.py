@@ -43,8 +43,8 @@ class Chamados:
         self.descricao = descricao
         self.status = "Aberto"
     
-    def __srt__(self):
-        return f"Id: {self.id}, \nTipo do problema {self.tipo_problema}, \nDescrição: {self.descricao}"
+    def __str__(self):
+        return (f"Id: {self.id}, \nTipo do problema {self.tipo_problema}, \nDescrição: {self.descricao} \nStatus do Chamado: {self.status}")
 
 class SistemaChamados:
     def __init__(self):
@@ -79,13 +79,13 @@ class SistemaChamados:
         if self.usuario_atual.admin:
             for chamado in self.chamados:
                 print("-" * 40)
-                print(f"Tipo de Problema: {chamado.tipo_problema} \nDescrição: {chamado.descricao}")
+                print(f"ID: {chamado.id} \nTipo de Problema: {chamado.tipo_problema} \nDescrição: {chamado.descricao} \nStatus do Chamado: {chamado.status}")
                 print("-" * 40)
         else:
             for chamado in self.chamados:
                 if chamado.usuario == self.usuario_atual:
                     print("-" * 40)
-                    print(f"Tipo de Problema: {chamado.tipo_problema} \nDescrição: {chamado.descricao}")
+                    print(f"ID: {chamado.id} Tipo de Problema: {chamado.tipo_problema} \nDescrição: {chamado.descricao} \nStatus do Chamado: {chamado.status}")
                     print("-" * 40)
     
     def atualizarChamados(self):
@@ -104,7 +104,7 @@ class SistemaChamados:
     def Inicialização(self):
          while True:
             if not self.login():
-                break
+                return 
             else:
                 print("Deseja tentar novamente? (S/N)")
                 if input().strip().upper() != 'S':
