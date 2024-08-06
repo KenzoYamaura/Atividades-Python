@@ -47,13 +47,10 @@ while True:
 
     if opcao == 1:
         barbearia.Agendar()
-
     elif opcao == 2:
-        barbearia.Cancelar()
-    
+        barbearia.Cancelar()    
     elif opcao == 3:
         barbearia.VisualizarAgenda()
-
     elif opcao == 0:
         print("Saindo...")
         break
