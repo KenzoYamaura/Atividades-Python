@@ -1,0 +1,21 @@
+body {    
+    background-color: rgb(120, 77, 240);
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    background-color: bisque;
+    font-size: 40px;
+}
+
+#Segundo {
+    background-color: rgb(228, 252, 120);
+}
+
+button a{
+    background-color: rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
+}
