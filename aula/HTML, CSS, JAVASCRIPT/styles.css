@@ -1,15 +1,15 @@
-body {    
-    background-color: rgb(28, 28, 28);
+body {
+    background-color: rgb(82, 82, 82);
     margin: auto;
-    font-family: 'PT Sans', Times, serif;
+    font-family: 'Arial', Times, serif;
     color: rgb(255, 255, 255);
     font-size: 30px;
     width: 490px;
-    padding: 0 20px 20px 20px;
+    padding: 0 100px;
 }
 
 div {
-    background-color: rgb(21, 21, 31);
+    background-color: rgb(34, 34, 49);
     border-radius: 20px;
     padding: 20px;
     align-items: center;
@@ -17,11 +17,11 @@ div {
 }
 
 img {
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%;
-    width: 90%;
-    height: 90%;
+    display: flex;
+    margin: auto;
+    border-radius: 100%;
+    width: 70%;
+    height: 70%;
 }
 
 h1 {
@@ -37,7 +37,7 @@ h2 {
 
 li {
     padding: 8px;
-    list-style: none;   
+    list-style: none;
     border-bottom: 3px solid white;
 }
 
@@ -45,7 +45,7 @@ p {
     font-size: 28px;
 }
 
-button{
+button {
     background-color: rgb(34, 85, 225);
     color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
@@ -55,5 +55,10 @@ button{
     border-radius: 10px;
     border-bottom: 10px white;
     border: none;
-    
+
+}
+
+button:hover {
+    background-color: rgb(233, 20, 20);
+    color: black;
 }
