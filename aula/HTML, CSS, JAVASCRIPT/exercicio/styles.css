@@ -1,0 +1,63 @@
+body {
+    background-color: rgb(43, 41, 41);
+    font-family: "Roboto Mono";
+    font-size: 30px;
+}
+
+.card {
+    background-color: rgb(34, 34, 49);
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+    border-radius: 20px;
+    width: 490px;
+    padding: 19px;
+    align-items: center;
+}
+
+.imagem {
+    border: black solid 3px;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 100%;
+    width: 350px;
+    height: 350px;
+}
+
+h1 {
+    font-size: 45px;
+    margin: 0;
+    padding: 10px;
+    align-items: center;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+.item {
+    list-style: none;
+    border-bottom: 2px solid white;
+    font-size: 20px;
+    padding: 10px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.link {
+    background-color: rgb(32, 77, 201);
+    color: rgb(255, 255, 255);
+    font-family: "Roboto Mono";
+    font-size: 19px;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.link:hover {
+    background-color: rgb(39, 97, 255);
+}
