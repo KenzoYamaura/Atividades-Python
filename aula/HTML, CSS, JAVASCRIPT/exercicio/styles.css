@@ -14,8 +14,24 @@ body {
     align-items: center;
 }
 
+.voltar {
+    background-color: rgb(54, 54, 54);
+    color: rgb(255, 255, 255);
+    font-family: "Roboto Mono";
+    border: none;    
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 30px;
+    
+}
+
+.voltar:hover {
+    background-color: rgb(143, 143, 143);
+
+}
+
 .imagem {
-    border: black solid 3px;
+    border: black solid 1px;
     display: flex;
     margin: 0 auto;
     border-radius: 100%;
