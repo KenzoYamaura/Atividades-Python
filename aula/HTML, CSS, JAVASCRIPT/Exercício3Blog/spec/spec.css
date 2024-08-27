@@ -5,3 +5,58 @@ body {
     width: 100%;
     margin: 0 auto;
 }
+
+ul {
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.imagens {
+    display: flex;
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: solid black 2px;
+}
+
+.meio h1{
+    text-align: center;
+    font-size: 30px;
+    margin: 0 auto;
+    padding: 15px; 
+}
+
+.meio {
+    margin: auto;
+    width: 100%;
+    height: 130px;
+}
+
+.meio h2 {
+    font-size: 30px;
+    width: 100%;
+    height: 30px;
+    justify-content: center;
+    display: flex;
+    padding: 0 0 20px;
+    margin: 0;    
+}
+
+.meio .voltar {
+    margin: 10px;
+    padding: 10px 10px;    
+    background-color: #1f1f1f;
+    color: rgb(255, 255, 255);
+    font-family: "Roboto Mono";
+    border: none;    
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.meio .voltar:hover {
+    background-color: #8f8f8f;
+}
