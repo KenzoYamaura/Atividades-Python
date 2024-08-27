@@ -1,4 +1,7 @@
 body {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+    font-family: "Roboto Mono";
+    width: 100%;
+    margin: 0 auto;
 }
