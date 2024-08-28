@@ -16,7 +16,8 @@ body {
 .head h1{
     text-align: center;
     font-size: 35px;
-    margin: 0 auto;    
+    margin: 0 auto;
+    height: 50px;    
 }
 
 .head button {
@@ -37,8 +38,8 @@ body {
 
 .imagens {
     display: flex;
-    width: 350px;
-    height: 350px;
+    width: 450px;
+    height: 450px;
     margin: 0 auto;
     border-radius: 20px;
     border: solid black 2px;
@@ -58,13 +59,13 @@ body {
 }
 
 .meio h2 {
-    font-size: 30px;
-    width: 100%;
-    height: 30px;
+    font-size: 30px; 
+    width: 100%;   
+    height: 75px;
     justify-content: center;
     display: flex;
-    padding: 0 0 20px;
-    margin: 0;    
+    padding: 30px;
+    margin: 0 auto;    
 }
 
 .meio p {
