@@ -7,7 +7,7 @@ body {
 }
 
 ul, li {
-    margin: 0 auto;
+    margin: 0 10px;
     font-size: 25px;
     padding: 10px 13px;
     list-style: none;
