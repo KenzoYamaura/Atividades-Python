@@ -1,0 +1,27 @@
+body {
+    background-color: #cccccc;    
+}
+
+.head {
+    background-color: #333;
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+}
+
+.ww {
+    display: flex;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-around;
+}
+
+.barralink {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    display: flex;
+    
+}
