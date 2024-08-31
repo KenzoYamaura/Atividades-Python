@@ -1,27 +1,103 @@
 body {
-    background-color: #cccccc;    
+    background-color: #cccccc;  
+    font-family: "Cinzel";
+    margin: auto;
+          
 }
 
 .head {
-    background-color: #333;
-    display: flex;
+    background-color: #000000;
     margin: 0;
+    display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.ww {
+.charls {
+    color: #ffffff;
+    padding: 0 50px;
     display: flex;
+    align-items: center;
 }
 
-.barra {
+.logomarca {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+}
+
+.logosite {
+    display: flex; 
+    margin: 0;   
+}
+
+
+nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 500px;
+    height: auto;    
 }
-
-.barralink {
-    color: #fff;
+  
+nav a{  
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+    color: #ffffff; 
     text-decoration: none;
-    padding: 20px;
+    padding: 38px 23px;    
+}
+
+.barralink:hover {
+    background-color: #565656;
+}
+
+.cardsmeio {
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;   
+    flex-wrap: wrap;
+    gap: 10px; 
+}
+
+.card {
+    background-color: rgb(230, 227, 227);
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+.cardimage {
+    margin: 20px;
+    width: 230px;
+    height: 230px;
+    border: 2px solid #a5a5a5;
+    border-radius: 10px;   
+    box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.6) 
+}
+
+button {
+    background-color: rgb(230, 227, 227);
+    border: none;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    font-size: 20px;
+    background-color: #d1cecb;
+    border-top: 2px solid #a5a5a5;
+}
+
+.bsobremim {
+    font-size: 23px;
 }
