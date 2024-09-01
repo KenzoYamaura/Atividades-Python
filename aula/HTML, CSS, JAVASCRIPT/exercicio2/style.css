@@ -1,21 +1,24 @@
 body {
     background-color: #cccccc;  
     font-family: "Cinzel";
-    margin: auto;
+    margin: 0 auto;
           
 }
 
 .head {
     background-color: #000000;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    background-image: url('./Art/background\ 2.jpeg');
+    background-size: cover;    
 }
 
 .charls {
     color: #ffffff;
-    padding: 0 50px;
+    padding: 0px 20px;
+    font-size: 24px;
     display: flex;
     align-items: center;
 }
@@ -28,9 +31,8 @@ body {
 
 .logosite {
     display: flex; 
-    margin: 0;   
+       
 }
-
 
 nav {
     display: flex;
@@ -38,9 +40,10 @@ nav {
     align-items: center;
     position: relative;
     width: 500px;
-    height: auto;    
+    height: auto;  
+    flex-wrap: wrap;  
 }
-  
+
 nav a{  
     position: relative;
     display: inline-block;
@@ -75,13 +78,21 @@ nav a{
     width: 300px;
 }
 
+/* .conteudocard {
+    width: 250px;
+    height: 100px;
+    font-size: 20px;
+    margin: 5px;
+    overflow: auto;
+} */
+
 .cardimage {
-    margin: 20px;
-    width: 230px;
-    height: 230px;
+    margin: 15px;
+    width: 200px;
+    height: 200px;
     border: 2px solid #a5a5a5;
     border-radius: 10px;   
-    box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.6) 
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6) 
 }
 
 button {
