@@ -51,7 +51,8 @@ nav a{
     font-weight: 500;
     color: #ffffff; 
     text-decoration: none;
-    padding: 38px 23px;    
+    padding: 38px 23px;
+    transition: background-color 0.4s ease;    
 }
 
 .barralink:hover {
@@ -78,13 +79,11 @@ nav a{
     width: 300px;
 }
 
-/* .conteudocard {
-    width: 250px;
-    height: 100px;
-    font-size: 20px;
-    margin: 5px;
-    overflow: auto;
-} */
+.conteudocard {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
 
 .cardimage {
     margin: 15px;
@@ -95,10 +94,6 @@ nav a{
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6) 
 }
 
-button {
-    background-color: rgb(230, 227, 227);
-    border: none;
-}
 
 .bottom {
     display: flex;
