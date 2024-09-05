@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: sans-serif
+
 }
 
 .viagem {
@@ -26,14 +28,53 @@ body {
 .linkmenu {
     color: white;
     margin-top: 15px;
-    padding: 10px;
-    text-decoration: none;   
+    padding: 15px 25px;
+    text-decoration: none;      
 }
 
 .meio {
-    background-color: yellow;
-    margin-left: 301px;
+    padding: 30px 20px;
+    margin-left: 310px;
+    height: auto;    
+}
+
+.textoh1mundo {
+    margin: 0;
+    font-size: 40px;
+}
+
+.textopmundo {
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.textoh1 {
+    padding: 0 0 1px;
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+.textop {
+    padding: 0 0 20px;
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+.imagem1 {   
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.imagens2 {
+    gap: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;    
+}
+
+.img2 {
+    border-radius: 15px;
+    width: 500px;
+    height: 300px;
 }
