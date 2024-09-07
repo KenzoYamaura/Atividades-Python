@@ -1,0 +1,68 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.imglogin {
+    width: 650px;
+    height: 500px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.telalogin {
+    background-color: rgb(27, 29, 139);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 190px;
+    width: 1140px;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 60px;
+    gap: 15px;   
+}
+
+.inp {
+    padding: 9px;
+    border: none;
+    background-color: #ffffff;  
+    color: white;  
+    width: 330px;
+    height: 30px;
+    border-radius: 7px;
+}
+
+.entrar {
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #244c88;
+    color: rgb(255, 255, 255);
+    width: 348px;
+    height: 35px;
+}
+
+.entrar:hover {
+    background-color: #3121c0;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
