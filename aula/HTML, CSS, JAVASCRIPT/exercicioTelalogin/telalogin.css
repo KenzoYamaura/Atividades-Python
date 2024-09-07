@@ -34,6 +34,7 @@ body {
     justify-content: center;
     margin: 60px;
     gap: 15px;   
+    flex-wrap: wrap;
 }
 
 .inp {
@@ -57,7 +58,7 @@ body {
 }
 
 .entrar:hover {
-    background-color: #3121c0;
+    background-color: #060d42;
 }
 
 h1 {
