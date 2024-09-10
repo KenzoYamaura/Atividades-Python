@@ -56,6 +56,7 @@ nav .barralink{
 
 .barralink:hover {
     background-color: #565656;
+   
 }
 
 .cardsmeio {
@@ -63,7 +64,6 @@ nav .barralink{
     justify-content: center;
     align-items: center;
     margin-top: 25px;   
-    flex-wrap: wrap;
     gap: 10px; 
 }
 
@@ -81,18 +81,22 @@ nav .barralink{
 .conteudocard {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;      
 }
 
 .cardimage {
     margin: 15px;
     width: 200px;
     height: 200px;
-    border: 2px solid #a5a5a5;
     border-radius: 10px;   
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6) 
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6)  
+      
 }
 
+.cardimage:hover {
+    scale: 1.4;
+    transition-duration: 0.5s;
+}
 
 .bottom {
     display: flex;
