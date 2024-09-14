@@ -1,0 +1,31 @@
+body {
+    background-color: black;
+}
+
+.caixa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(107, 153, 46);
+}
+
+.item3 {
+    background-color: rgb(230, 230, 230);
+    grid-area: head;    
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(5, 100px);
+    grid-template-areas: 
+    "head head head head head"
+    ". . . . ."
+    ". . . . ."
+    ". . . . ."
+    ". . . . .";
+}
+
