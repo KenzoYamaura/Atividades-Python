@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: rgb(53, 55, 146);
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;    
+    color: #ffffff;
+}
+
+.minhaloja {
+    margin: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: auto;
+}
+nav .menu {
+    display: inline-block;
+    font-size: 25px;
+    color: #ffffff; 
+    text-decoration: none;
+    padding: 0 20px;
+}

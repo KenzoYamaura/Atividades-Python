@@ -39,8 +39,7 @@ nav {
     align-items: center;
     position: relative;
     width: 500px;
-    height: auto;  
-    flex-wrap: wrap;  
+    height: auto; 
 }
 
 nav .barralink{  
