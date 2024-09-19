@@ -12,6 +12,15 @@ header {
     color: #ffffff;
 }
 
+container {
+    margin: 50px 10px 50px 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, 350px);
+    gap: 50px;
+}
+
 .minhaloja {
     margin: 30px;
 }
@@ -74,13 +83,4 @@ nav .menu:hover {
 
 .botao:hover {
     background-color: #5d5df8;
-}
-
-container {
-    margin: 50px 10px 50px 10px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(auto-fill, 350px);
-    gap: 50px;
 }
