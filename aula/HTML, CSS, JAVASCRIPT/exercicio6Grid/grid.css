@@ -31,6 +31,7 @@ nav {
     align-items: center;
     width: 450px;
     height: auto;
+    
 }
 
 nav .menu {
@@ -41,7 +42,7 @@ nav .menu {
     padding: 0 15px;
 }
 
-nav .menu:hover {
+nav .menu:hover {    
     color: #9797ff;
 }
 
@@ -84,3 +85,6 @@ nav .menu:hover {
 .botao:hover {
     background-color: #5d5df8;
 }
+
+
+
