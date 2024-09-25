@@ -169,7 +169,7 @@ h2 {
     }
 
     .sobre {
-        grid-template-columns: auto;
+        grid-template-columns: repeat(1, 530px);
     }
 
 }
