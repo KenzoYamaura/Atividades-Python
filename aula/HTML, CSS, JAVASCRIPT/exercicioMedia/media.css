@@ -49,9 +49,7 @@ h1 {
     flex-direction: column;
     background-color: #72a8a8;
     color: #ffffff;
-    font-size: 24 px;
-    width: auto;
-    height: auto;
+    font-size: 24px;
     margin: 0 60px;
     padding: 30px 30px;
     font-size: 22px;
@@ -132,32 +130,29 @@ h2 {
 .sobre {
     display: grid;
     justify-content: center;
-    align-items: center;
-    margin: 50px;
+    margin: 50px 100px;
     gap: 10px;
     grid-template-columns: repeat(2, 530px);
-    grid-template-rows: repeat(2, 130px);
 }
 
 .card1 {
     padding: 5px;
-    width: 500px;
     margin: 5px;
     background-color: #496969;
-    color: white;
+    color: #ffffff;
     font-size: 19px;
 }
 
 .card2 {
     padding: 5px;
-    width: 500px;
     margin: 5px;
     background-color: #87c5c5;
-    color: rgb(0, 0, 0);
+    color: #000000;
     font-size: 19px;
 }
 
 @media (max-width: 1000px) {
+
     .destino {
         flex-wrap: wrap;
     }
@@ -169,7 +164,7 @@ h2 {
     }
 
     .sobre {
-        grid-template-columns: repeat(1, 530px);
+        grid-template-columns: 530px;
     }
 
 }
