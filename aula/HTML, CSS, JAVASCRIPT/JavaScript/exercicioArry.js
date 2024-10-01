@@ -1,8 +1,8 @@
 
-var array1 = [1, 2, 3, 4, 5]
-var array2 = [5, 6, 7, 8, 9, 10]
-var array3 = []
+var array1 = [1, 2, 3, 4, 5];
+var array2 = [5, 6, 7, 8, 9, 10];
 
-for(let i = 0; i < array1.length; i++){
-    console.log(i)
-}
+
+var array3 = [new Set([...array1, ...array2])];
+
+console.log(array3)
