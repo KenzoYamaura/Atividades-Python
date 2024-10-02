@@ -59,6 +59,11 @@ update medicamentos set quantidade_em_estoque = 100 where medicamentoid = 3;
 
 select * from medicamentos where fabricante = 'PharmaCorp' or fabricante = 'MegaMed';
 
+insert into medicamentos(nome, fabricante, preco, quantidade_em_estoque)
+values('Loratadina','AllergiPharma', 4.50, 120),
+	  ('Ibuprofeno','MedicaGen', 5.50, 80);
+
+select * from medicamentos where preco < 6.00 and quantidade_em_estoque > 50;
 
 
 
