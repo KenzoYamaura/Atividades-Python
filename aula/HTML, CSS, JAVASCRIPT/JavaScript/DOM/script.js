@@ -1,18 +1,17 @@
 
 var x = document.getElementById("botão")
-x.innerHTML = "Click"
+x.innerHTML = "Butão"
 
 const newElement = document.createElement("p")
 
+
 x.addEventListener("click", function () {
 
-    const y = document.getElementsByClassName("texto")
+    let y = document.getElementById("texto")
     newElement.innerHTML = "Lorem ipsum dolor sit"
 
-    y[0].appendChild(newElement)
-
-    console.log("oi")
-
+    y.appendChild(newElement)
+    
 })
 
 
