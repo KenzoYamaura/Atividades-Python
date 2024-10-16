@@ -42,7 +42,8 @@ insert into Notas(id_notas, alunosId, disciplinasId, nota_alunos) values
 
 
 select Alunos.nome, Alunos.sobrenome, Disciplinas.nome_disciplina, Disciplinas.codigo_disciplina, Notas.nota_alunos
-from Notas join Alunos ON Notas.alunosId = Alunos.id_alunos 
+from Notas 
+join Alunos ON Notas.alunosId = Alunos.id_alunos 
 join Disciplinas ON Notas.disciplinasId = Disciplinas.id_disciplinas;
 
 
