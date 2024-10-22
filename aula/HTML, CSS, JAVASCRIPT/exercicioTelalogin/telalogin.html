@@ -9,15 +9,26 @@
 </head>
 
 <body>
+
     <form class="telalogin">
         <img class="imglogin" src="./img/imagemfoda.jpeg" alt="Paisagem">
         <div class="inputs">
             <h1>Login</h1>
-            <input class="inp" type="email" placeholder="E-mail">
-            <input class="inp" type="password" placeholder="Senha">
+            <div class="control">
+                <label for="email">E-MAIL</label>
+                <input id="email" type="email" placeholder="Digite seu E-mail">
+                <small>Msg Erro</small>
+            </div>
+            <div class="control">
+                <label for="senha">SENHA</label>
+                <input id="senha" type="password" placeholder="Digite sua Senha">
+                <small>Msg Erro</small>
+            </div>
             <button class="entrar">Entrar</button>
         </div>
     </form>
+
+    <script src="telalogin.js"></script>
 </body>
 
 </html>
