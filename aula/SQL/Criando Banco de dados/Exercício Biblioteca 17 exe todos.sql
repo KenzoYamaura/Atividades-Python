@@ -133,6 +133,11 @@ join Categorias on Categorias.categoria_id = Livros.livro_id;
 
 -- 11 - Quem são os membros que mais pegaram livros emprestados? --
 
+select Membros.nome, Livros.titulo, count(Emprestimos.emprestimo_id) as Quantidade
+from Livros
+join Membros on Membros.membro_id = Livros.livro_id
+join emprestimos on Emprestimos.emprestimo_id = Livros.livro_id group by membros.nome;
+
 
 
 
