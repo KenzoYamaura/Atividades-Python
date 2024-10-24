@@ -31,12 +31,11 @@ function veriSize(input, maximo, minimo) {
     return valido
 }
 
-
 function verificarRequerimento(inputListas) {
 
     let valid = true
     inputListas.forEach(function (input) {
-        if (input.value = "") {
+        if (input.value == "") {
             MostrarErro(input, "Campo Obrigatório")
             valid = false
         } else {
@@ -54,7 +53,7 @@ telalogin.addEventListener("submit", function (event) {
     validacao = veriSize(email, 15, 3) && validacao
     validacao = veriSize(senha, 15, 3) && validacao
 
-    if(validacao){
+    if (validacao) {
         const dados = {
             email: email.value,
             senha: senha.value
