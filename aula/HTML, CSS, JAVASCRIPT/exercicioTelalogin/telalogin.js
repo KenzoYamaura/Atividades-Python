@@ -1,4 +1,5 @@
 
+const telalogin = document.getElementById("telalogin")
 const email = document.getElementById("email")
 const senha = document.getElementById("senha")
 const botao = document.getElementById("entrar")
@@ -41,19 +42,24 @@ function verificarRequerimento(inputListas) {
         } else {
             MostrarSucesso(input)
         }
-
     })
     return valid
 }
 
-botao.addEventListener("submit", function (event) {
+telalogin.addEventListener("submit", function (event) {
     event.preventDefault()
 
     let validacao = verificarRequerimento([email, senha])
 
-    validacao = veriSize(usuario, 15, 3) && validacao
+    validacao = veriSize(email, 15, 3) && validacao
     validacao = veriSize(senha, 15, 3) && validacao
 
-    console.log("opijkad")
+    if(validacao){
+        const dados = {
+            email: email.value,
+            senha: senha.value
+        }
+        console.log(dados)
+    }
 })
 
