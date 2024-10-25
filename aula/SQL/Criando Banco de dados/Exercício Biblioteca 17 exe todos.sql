@@ -138,10 +138,13 @@ from Emprestimos
 join Membros on Membros.membro_id = Emprestimos.membro_id
 join livros on Emprestimos.emprestimo_id = Livros.livro_id group by membros.nome;
 
-INSERT INTO Emprestimos (livro_id, membro_id, data_emprestimo, data_devolucao) VALUES
-(1, 1, '2023-09-18', '2023-11-20');
+-- 12 - Quais livros foram devolvidos e em que datas? --
 
+select Livros.titulo, Emprestimos.data_devolucao
+from Livros
+join Emprestimos on Emprestimos.emprestimo_id = Livros.livro_id where Emprestimos.data_devolucao is not null;
 
+-- 13 - Qual é a média de preço dos livros na biblioteca? --
 
 
 
