@@ -2,6 +2,8 @@ CREATE DATABASE Biblioteca;
 
 USE Biblioteca;
 
+select * from Autores;
+
 CREATE TABLE Autores (
  autor_id INT AUTO_INCREMENT PRIMARY KEY,
  nome VARCHAR(100) NOT NULL,
@@ -85,10 +87,66 @@ select titulo, preco from Livros;
 
 -- 4 - Quais membros pegaram livros emprestados? --
 
-select Membros.nome from Emprestimos 
-join Membros on Membros.membro_id = Emprestimos.membro_id group by membros.nome;
+select Membros.membro_id, Membros.nome, Livros.titulo from Emprestimos 
+join Membros on Membros.membro_id = Emprestimos.membro_id
+join Livros on Livros.livro_id = Emprestimos.livro_id;
 
 -- 5 - Quais livros foram emprestados até agora? -- 
+
+select Livros.titulo, Autores.nome, Membros.nome, Emprestimos.data_emprestimo, Emprestimos.data_devolucao  
+from Emprestimos
+join Livros on Emprestimos.livro_id = Livros.livro_id
+join Autores on Livros.autor_id = Autores.autor_id
+join Membros on Emprestimos.membro_id = Membros.membro_id;
+
+-- 6 - Qual é a receita total de cada livro (considerando o preço e as unidades vendidas)? --
+
+select Livros.titulo, Livros.preco * count(Emprestimos.emprestimo_id) as Unidade_Vendida
+from Livros 
+join Emprestimos on Emprestimos.livro_id = Livros.livro_id group by Livros.titulo;
+
+-- 7 - Quais categorias de livros estão disponíveis na biblioteca? --
+
+select Livros.titulo, Categorias.nome 
+from Livros 
+join Categorias on Categorias.categoria_id = Livros.livro_id;
+
+-- 8 - Quais são os autores e suas respectivas categorias de livros? --
+
+select Autores.nome, Livros.titulo, Categorias.nome
+from Autores
+join Categorias on Categorias.categoria_id = Autores.autor_id
+join Livros on Livros.livro_id = Autores.autor_id;
+
+-- 9 - Qual é a quantidade total de livros de cada categoria? --
+
+select Categorias.nome, count(Livros.livro_id) 
+from Livros
+join Categorias on Livros.livro_id = Categorias.categoria_id group by Categorias.nome;
+
+-- 10 - Liste todos os livros junto com o nome do autor e a categoria. --
+
+select Livros.titulo, Autores.nome as Nome_Autor, Categorias.nome as Categoria_Nome
+from Livros
+join Autores on Autores.autor_id = Livros.livro_id
+join Categorias on Categorias.categoria_id = Livros.livro_id;
+
+-- 11 - Quem são os membros que mais pegaram livros emprestados? --
+
+select Membros.nome, Livros.titulo, count(Emprestimos.emprestimo_id) as Quantidade
+from Emprestimos
+join Membros on Membros.membro_id = Emprestimos.membro_id
+join livros on Emprestimos.emprestimo_id = Livros.livro_id group by membros.nome;
+
+-- 12 - Quais livros foram devolvidos e em que datas? --
+
+select Livros.titulo, Emprestimos.data_devolucao
+from Livros
+join Emprestimos on Emprestimos.emprestimo_id = Livros.livro_id where Emprestimos.data_devolucao is not null;
+
+-- 13 - Qual é a média de preço dos livros na biblioteca? --
+
+
 
 
 
