@@ -8,7 +8,7 @@ function MostrarErro(input, mensagem) {
 
     const control = input.parentElement
     control.className = "control error"
-    const small = document.querySelector("small")
+    const small = control.querySelector("small")
     small.innerHTML = mensagem
 }
 
@@ -50,7 +50,7 @@ telalogin.addEventListener("submit", function (event) {
 
     let validacao = verificarRequerimento([email, senha])
 
-    validacao = veriSize(email, 15, 3) && validacao
+    validacao = veriSize(email, 40, 3) && validacao
     validacao = veriSize(senha, 15, 3) && validacao
 
     if (validacao) {

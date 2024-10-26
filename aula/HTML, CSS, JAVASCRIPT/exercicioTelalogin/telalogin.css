@@ -18,7 +18,7 @@ body {
 }
 
 .telalogin {
-    background-color: rgb(27, 29, 139);
+    background-color: grey;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -32,7 +32,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 60px;
+    margin: 60px;    
     gap: 15px;   
     flex-wrap: wrap;
 
@@ -57,7 +57,7 @@ body {
     width: 330px;
     height: 30px;
     border-radius: 7px;
-    border: none;
+    
 }
 
 #senha {
@@ -69,12 +69,10 @@ body {
     width: 330px;
     height: 30px;
     border-radius: 7px;
-    border: none;
 }
 
 #entrar {
     font-size: 20px;
-    border: none;
     border-radius: 6px;
     background-color: #244c88;
     color: rgb(255, 255, 255);
@@ -86,17 +84,23 @@ body {
     background-color: #060d42;
 }
 
-.errado input:focus {
+.error input:focus {
+    outline: 0;    
+    border-color: #777;
+}
+
+.sucesso input:focus {
     outline: 0;    
     border-color: #777;
 }
 
 .control.sucesso input {
-    border-color: green;
+    border: 3px solid rgb(35, 212, 35);
+
 }
 
 .control.error input {
-    border-color: red;
+    border: 3px solid red;
 }
 
 .control.error small {
@@ -115,3 +119,4 @@ h1 {
     align-items: center;
     margin: 0;
 }
+
