@@ -146,10 +146,32 @@ join Emprestimos on Emprestimos.emprestimo_id = Livros.livro_id where Emprestimo
 
 -- 13 - Qual é a média de preço dos livros na biblioteca? --
 
+select round(avg(preco),2) from Livros;
 
+-- 14 - Qual é a quantidade total de livros emprestados? -- 
 
+select Livros.titulo, Emprestimos.data_emprestimo, Livros.estoque
+from Livros
+join Emprestimos on Emprestimos.livro_id = Livros.livro_id;
 
+-- 15- Quais membros ainda não devolveram os livros? --
 
+select Membros.nome, Emprestimos.data_devolucao
+from Emprestimos
+join Membros on Membros.membro_id = Emprestimos.membro_id 
+where Emprestimos.data_devolucao is null;
+
+-- 16 - Qual foi a receita gerada por empréstimos até agora? --
+
+select sum(Livros.preco) as Receita_Total
+from Livros
+join Emprestimos on Emprestimos.livro_id = Livros.livro_id;
+
+-- 17 - Quais são os livros disponíveis em cada categoria? --
+
+select Livros.titulo, Livros.estoque, Categorias.nome
+from Livros
+join Categorias on Livros.categoria_id = Categorias.categoria_id;
 
 
 
