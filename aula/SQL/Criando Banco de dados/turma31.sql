@@ -20,3 +20,6 @@ create table imagens(
 insert into usuario(nome, senha) values
 ("Kenzo", "223344");
 
+select * from imagens;
+
+drop table imagens;
